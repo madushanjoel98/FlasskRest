@@ -1,0 +1,38 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-013-408
+INFO:werkzeug:127.0.0.1 - - [23/Jul/2024 14:59:45] "POST /usercontroller/login HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'D:\\Madushan\\python\\newproject\\pythonProject\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-013-408
+INFO:werkzeug: * Detected change in 'D:\\Madushan\\python\\newproject\\pythonProject\\dao\\usertableDAO.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-013-408
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-013-408
+INFO:werkzeug:127.0.0.1 - - [23/Jul/2024 15:16:02] "POST /usercontroller/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Jul/2024 15:31:01] "POST /usercontroller/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Jul/2024 15:31:02] "POST /usercontroller/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Jul/2024 15:31:03] "POST /usercontroller/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Jul/2024 15:31:04] "POST /usercontroller/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Jul/2024 15:32:33] "POST /usercontroller/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Jul/2024 15:36:27] "POST /usercontroller/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Jul/2024 15:36:29] "POST /my/encryption HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Jul/2024 15:36:30] "POST /my/encryption HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Jul/2024 15:36:31] "POST /my/encryption HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Jul/2024 15:36:41] "POST /my/encryption HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 249-013-408

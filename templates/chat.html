@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Visualization</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 20px;
+        }
+
+        .chat-container {
+            border: 1px solid #ccc;
+            padding: 10px;
+            max-width: 1000px;
+            margin: auto;
+            height: 1000px;
+            overflow-y: scroll;
+        }
+
+        .message {
+            margin: 5px 0;
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+
+        .message.user {
+            background-color: #d1f7d1;
+            text-align: right;
+        }
+
+        .message.other {
+            background-color: #f1f1f1;
+        }
+
+        .timestamp {
+            font-size: 0.8em;
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h1 class="text-center my-4">Chat Visualization</h1>
+    <div class="text-center mb-3">
+        <input type="file" id="fileInput" class="form-control-file"/>
+    </div>
+    <div class="chat-container" id="chatContainer"></div>
+</div>
+
+<script>
+    document.getElementById('fileInput').addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const text = e.target.result;
+                displayChat(text);
+            };
+            reader.readAsText(file);
+        }
+    });
+
+    function displayChat(text) {
+        const chatContainer = document.getElementById('chatContainer');
+        chatContainer.innerHTML = ''; // Clear previous chat messages
+
+        const lines = text.split('\n');
+        lines.forEach(line => {
+            const parts = line.split(' - ');
+            if (parts.length === 2) {
+                const [timestamp, message] = parts;
+                const [date, time] = timestamp.split(', ');
+                const [speaker, content] = message.split(': ', 2);
+
+                if (speaker && content) {
+                    const messageDiv = document.createElement('div');
+                    messageDiv.classList.add('message', 'p-2', 'mb-2');
+                    messageDiv.classList.add(speaker === 'Shashini 🌻' ? 'other' : 'user');
+
+                    const timestampDiv = document.createElement('div');
+                    timestampDiv.classList.add('timestamp', 'text-muted');
+                    timestampDiv.textContent = `${date} ${time}`;
+
+                    const contentDiv = document.createElement('div');
+                    contentDiv.innerHTML = `<strong>${speaker}:</strong> ${content}`;
+
+                    messageDiv.appendChild(timestampDiv);
+                    messageDiv.appendChild(contentDiv);
+                    chatContainer.appendChild(messageDiv);
+                }
+            }
+        });
+    }
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
